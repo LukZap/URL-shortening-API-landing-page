@@ -9,6 +9,7 @@ export class CardComponent implements OnInit {
 
   @Input() icon: string;
   @Input() cardTitle: string;
+  @Input() showConnectors = false;
 
   iconPath: string;
 

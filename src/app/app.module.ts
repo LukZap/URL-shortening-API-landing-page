@@ -9,12 +9,14 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatButtonModule} from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardComponent } from 'src/components/card/card.component';
+import { FooterItemComponent } from 'src/components/footer-item/footer-item.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    FooterItemComponent
   ],
   imports: [
     BrowserModule,

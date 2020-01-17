@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.footer-item {
+  &__title {
+    color: white;
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    color: $gray;
+    font-size: 0.85rem;
+  }
+
+  &__list-item {
+    margin-bottom: 20px;
+  }
+}
