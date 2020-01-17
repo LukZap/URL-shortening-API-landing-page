@@ -1,6 +1,16 @@
-<header fxLayout="row" fxLayoutAlign="space-between center">
-  <img class="header__logo" src="../assets/images/logo.svg" alt="Shortly logo" /> <!-- remove class when unused -->
-  <i class="header__hamburger-menu fas fa-bars"></i>
+<header>
+  <div fxLayout="row" fxLayoutAlign="space-between center">
+    <img class="header__logo" src="../assets/images/logo.svg" alt="Shortly logo" /> <!-- remove class when unused -->
+    <i class="header__hamburger-menu fas fa-bars" (click)="showMenu()"></i>
+  </div>
+  <div class="menu menu--closed" #menu fxLayout="column" fxLayoutAlign="space-evenly center">
+    <h3 class="menu__menu-item">Features</h3>
+    <h3 class="menu__menu-item">Pricing</h3>
+    <h3 class="menu__menu-item">Resources</h3>
+    <div class="menu__separator"></div>
+    <h3 class="menu__menu-item">Login</h3>
+    <button class="menu__menu-button rounded">Sign Up</button>
+  </div>
 </header>
 
 
@@ -52,8 +62,9 @@
   <app-footer-item title="Features" [listItems]="['Link Shortening','Branded Links','Analytics']"></app-footer-item>
   <app-footer-item title="Resources" [listItems]="['Blog','Developers','Support']"></app-footer-item>
   <app-footer-item title="Company" [listItems]="['About','Our Team','Careers', 'Contact']"></app-footer-item>
-  <div class="footer__social-icons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap=24px>  <!-- remove class when unused -->
-    <img class="footer__social-icon" src="../assets/images/icon-facebook.svg">  <!-- remove class when unused -->
+  <div class="footer__social-icons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap=24px>
+    <!-- remove class when unused -->
+    <img class="footer__social-icon" src="../assets/images/icon-facebook.svg"> <!-- remove class when unused -->
     <img class="footer__social-icon" src="../assets/images/icon-twitter.svg">
     <img class="footer__social-icon" src="../assets/images/icon-pinterest.svg">
     <img class="footer__social-icon" src="../assets/images/icon-instagram.svg">
