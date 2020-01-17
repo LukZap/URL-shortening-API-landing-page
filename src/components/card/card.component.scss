@@ -1,0 +1,36 @@
+@import '../../styles/variables.scss';
+
+.card {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 75px 30px 40px;
+    position: relative;
+
+    &__icon-container {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      display: flex;
+      background-color: $primary-dark-violet;
+      border-radius: 50%;
+      width: 85px;
+      height: 85px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 0.83rem;
+        text-align: center;
+        letter-spacing: 0.01rem;
+    }
+
+}

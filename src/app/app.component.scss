@@ -1,0 +1,90 @@
+@import '../styles/variables.scss';
+
+header {
+    $self: '.header';
+    padding: 35px 25px 10px;
+
+    #{$self}__hamburger-menu {
+        color: $grayish-violet;
+        font-size: 1.6rem;
+    }
+}
+
+.top-section {
+    padding: 0 25px;
+    text-align: center;
+
+    &__image {
+        width: 160%;
+    }
+
+    &__title {
+        margin-top: 40px;
+    }
+
+    &__text {
+        margin-top: 13px;
+    }
+
+    &__button {
+        margin-top: 25px;
+    }
+}
+
+.search-bar {
+    margin: 0 25px;
+    transform: translateY(50%);
+    background-color: $primary-dark-violet;
+    background-image: url(../assets/images/bg-shorten-mobile.svg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    padding: 23px 23px;
+
+    &__input {
+        margin-bottom: 17px;
+    }
+
+    &__button {
+        border-radius: 6px;
+        padding: 10px;
+    }
+}
+
+.advanced-section {
+    background-color: $light-gray;
+    padding: 175px 25px 75px;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 0.85rem;
+        text-align: center;
+        letter-spacing: 0.017rem;
+    }
+
+    &__cards-container {
+      margin-top: 70px;
+    }
+}
+
+.boost-section {
+  background-color: $primary-dark-violet;
+  background-image: url(../assets/images/bg-boost-mobile.svg);
+  height: 300px;
+
+  &__title {
+    color: white;
+  }
+
+  &__button {
+    position: relative;
+    top: 30px;
+  }
+}
+
+footer {
+    background-color: $very-dark-blue;
+}

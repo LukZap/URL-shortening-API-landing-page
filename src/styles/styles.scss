@@ -1,0 +1,66 @@
+@import 'variables.scss';
+@import 'reset.css';
+
+html {
+    font-size: 18px;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,h2,h3 {
+    font-weight: 700;
+    color: $very-dark-blue;
+}
+
+h1 {
+    line-height: 1.2em;
+    font-size: 2.25rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+    line-height: 1.65em;
+    color: $grayish-violet;
+    font-size: 500;
+}
+
+button {
+    background-color: $primary-cyan;
+    color: white;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    // letter-spacing: 0.05rem;
+
+    &.rounded {
+        border-radius: 500px;
+    }
+}
+
+input {
+    border-radius: 6px;
+    font-size: 0.9rem;
+    padding: 12px;
+    padding-bottom: 10px;
+    color: $grayish-violet;
+
+    &::placeholder {
+        color: $grayish-violet;
+        opacity: 1; /* Firefox */
+      }
+}
