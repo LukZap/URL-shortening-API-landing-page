@@ -55,8 +55,15 @@ button {
     font-weight: 700;
     // letter-spacing: 0.05rem;
 
+    // is that good approach?
     &.rounded {
         border-radius: 500px;
+    }
+
+    // is that good approach?
+    &.small {
+      font-size: 0.85rem;
+      padding: 0.45rem 1.3rem;
     }
 }
 

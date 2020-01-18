@@ -1,17 +1,33 @@
 @import '../styles/variables.scss';
 
 header {
-    position: relative;
-    $self: '.header';
-    padding: 35px 25px 15px;
+  position: relative;
+  $self: '.header';
+  padding: 35px 25px 15px;
 
-    #{$self}__hamburger-menu {
-        color: $grayish-violet;
-        font-size: 1.6rem;
+  #{$self}__menu-container {
+    width: 100%;
+    margin-left: 40px;
+  }
+
+  #{$self}__menu-item {
+    cursor: pointer;
+    color: $grayish-violet;
+
+    &:hover {
+      color: $very-dark-blue;
     }
+  }
+
+  #{$self}__hamburger-button {
+    color: $grayish-violet;
+    font-size: 1.6rem;
+    padding: 0;
+    background-color: white;
+  }
 }
 
-.menu {
+.hamburger-menu {
   position: absolute;
   height: 370px;
   width: calc(100% - 2 * 25px);
@@ -49,7 +65,8 @@ header {
     overflow: hidden;
 
     &__image {
-        width: 152%;
+      max-width: 550px;
+      width: 152%;
     }
 
     &__title {
