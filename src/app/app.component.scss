@@ -1,5 +1,10 @@
 @import '../styles/variables.scss';
 
+.wrapper > * {
+  padding-left: calc((100% - 1200px)/2);
+  padding-right: calc((100% - 1200px)/2);
+}
+
 header {
   position: relative;
   $self: '.header';
@@ -65,7 +70,7 @@ header {
     overflow: hidden;
 
     &__image {
-      max-width: 750px;
+      max-width: 780px;
       width: 152%;
     }
 
@@ -83,7 +88,6 @@ header {
 }
 
 .search-bar {
-    margin: 0 25px;
     transform: translateY(50%);
     background-color: $primary-dark-violet;
     background-image: url(../assets/images/bg-shorten-mobile.svg);
@@ -91,10 +95,6 @@ header {
     background-repeat: no-repeat;
     border-radius: 10px;
     padding: 23px 23px;
-
-    &__input {
-        margin-bottom: 17px;
-    }
 
     &__button {
         border-radius: 6px;

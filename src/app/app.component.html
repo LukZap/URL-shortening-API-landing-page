@@ -1,95 +1,106 @@
-<header [ngStyle.gt-xs]="{'margin-bottom': '45px'}">
-  <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-md="start center">
-    <img src="../assets/images/logo.svg" alt="Shortly logo">
-    <div class="header__menu-container" fxLayout="row" fxLayoutAlign="space-between center" fxShow
-      [fxHide.lt-md]="true">
-      <div fxLayout="row" fxLayoutGap="30px">
-        <h5 class="header__menu-item">Features</h5> <!-- change to buttons? -->
-        <h5 class="header__menu-item">Pricing</h5>
-        <h5 class="header__menu-item">Resources</h5>
+<div ngClass.gt-md="wrapper">
+  <header [ngStyle.gt-xs]="{'margin-bottom': '45px'}">
+    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-md="start center">
+      <img src="../assets/images/logo.svg" alt="Shortly logo">
+      <div class="header__menu-container" fxLayout="row" fxLayoutAlign="space-between center" fxShow
+        [fxHide.lt-md]="true">
+        <div fxLayout="row" fxLayoutGap="30px">
+          <h5 class="header__menu-item">Features</h5> <!-- change to buttons? -->
+          <h5 class="header__menu-item">Pricing</h5>
+          <h5 class="header__menu-item">Resources</h5>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px">
+          <h5 class="header__menu-item">Login</h5> <!-- change to buttons? -->
+          <button class="small rounded">Sign Up</button>
+        </div>
       </div>
-      <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px">
-        <h5 class="header__menu-item">Login</h5> <!-- change to buttons? -->
-        <button class="small rounded">Sign Up</button>
-      </div>
+      <button class="header__hamburger-button" fxHide [fxShow.lt-md]="true" (click)="showMenu = !showMenu">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
-    <button class="header__hamburger-button" fxHide [fxShow.lt-md]="true" (click)="showMenu = !showMenu">
-      <i class="fas fa-bars"></i>
-    </button>
-  </div>
-  <div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center"
-    fxHide [fxShow.lt-md]="true">
-    <h3 class="hamburger-menu__menu-item">Features</h3> <!-- change to buttons? -->
-    <h3 class="hamburger-menu__menu-item">Pricing</h3>
-    <h3 class="hamburger-menu__menu-item">Resources</h3>
-    <div class="hamburger-menu__separator"></div>
-    <h3 class="hamburger-menu__menu-item">Login</h3>
-    <button class="hamburger-menu__menu-button rounded">Sign Up</button>
-  </div>
-</header>
+    <div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center"
+      fxHide [fxShow.lt-md]="true">
+      <h3 class="hamburger-menu__menu-item">Features</h3> <!-- change to buttons? -->
+      <h3 class="hamburger-menu__menu-item">Pricing</h3>
+      <h3 class="hamburger-menu__menu-item">Resources</h3>
+      <div class="hamburger-menu__separator"></div>
+      <h3 class="hamburger-menu__menu-item">Login</h3>
+      <button class="hamburger-menu__menu-button rounded">Sign Up</button>
+    </div>
+  </header>
 
-<!-- add margin to body -->
-<!-- not too much styles on that template? -->
-<div class="top-section" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between center">
-  <img class="top-section__image" fxFlexAlign.xs="start" fxFlexOrder.gt-xs="1" [ngStyle.xs]="{'max-width': '705px'}"
-    [ngStyle.sm]="{width: '60%'}" [ngStyle.gt-sm]="{width: '50%'}" src="../assets/images/illustration-working.svg"
-    alt="Man sitting at the desk" />
-  <div [ngStyle.gt-xs]="{'min-width': '55%', 'margin-right': '30px'}"
-    [ngStyle.gt-md]="{ 'text-align': 'left', 'min-width': '60%', 'margin-right': '40px'}" fxLayout="column"
-    fxLayoutAlign="space-between center">
-    <h1 class="top-section__title" [ngStyle.md]="{'font-size': '3rem'}" [ngStyle.gt-md]="{'font-size': '4.2rem'}">
-      More than just shorter links</h1>
-    <p class="top-section__text" [ngStyle.gt-sm]="{'font-size': '1.13rem'}" [ngStyle.gt-md]="{'font-size': '1.25rem'}">
-      Build your brand’s recognition and get detailed insights
-      on how your links are performing.
+  <!-- not too much styles on that template? -->
+  <div class="top-section" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between center">
+    <img class="top-section__image" fxFlexAlign.xs="start" fxFlexOrder.gt-xs="1" [ngStyle.xs]="{'max-width': '705px'}"
+      [ngStyle.sm]="{width: '60%'}" [ngStyle.gt-sm]="{width: '55%'}" [ngStyle.gt-md]="{width: '60%'}"
+      src="../assets/images/illustration-working.svg" alt="Man sitting at the desk" />
+    <div [ngStyle.gt-xs]="{'min-width': '55%', 'margin-right': '30px'}"
+      [ngStyle.gt-md]="{ 'text-align': 'left', 'min-width': '50%', 'margin-right': '50px'}" fxLayout="column"
+      fxLayoutAlign="space-between center">
+      <h1 class="top-section__title" [ngStyle.md]="{'font-size': '3rem'}" [ngStyle.gt-md]="{'font-size': '4.2rem'}">
+        More than just shorter links</h1>
+      <p class="top-section__text" [ngStyle.gt-sm]="{'font-size': '1.13rem'}"
+        [ngStyle.gt-md]="{'font-size': '1.25rem', 'margin-top':'-3px'}">
+        Build your brand’s recognition and get detailed insights
+        on how your links are performing.
+      </p>
+      <button class="top-section__button rounded" fxFlexAlign.gt-md="start" [ngStyle.gt-md]="{'margin-top':'30px'}">Get
+        Started</button>
+    </div>
+  </div>
+
+
+  <div [ngStyle.lt-lg]="{'margin': '0 25px'}">
+    <div class="search-bar" fxLayout="column" fxLayoutGap="17px" fxLayoutGap.gt-sm="22px" fxLayout.gt-sm="row"
+      fxLayoutAlign.gt-sm="space-between stretch" [ngStyle.sm]="{'padding':'30px 30px'}"
+      [ngStyle.gt-sm]="{'padding':'50px 60px', 'background-image': 'url(../assets/images/bg-shorten-desktop.svg)', 'background-size': cover}">
+      <input class="search-bar__input" [ngStyle.gt-sm]="{'padding': '0.7em 1.5em', 'font-size': '1rem'}"
+        [ngStyle.gt-md]="{'font-size': '1.1rem'}" fxFlex.gt-sm="auto" type="text" placeholder="Shorten a link here...">
+      <button class="search-bar__button" [ngStyle.gt-sm]="{'font-size': '0.9rem'}"
+        [ngStyle.gt-md]="{'font-size': '1.1rem'}" fxFlex.gt-sm="10em">Shorten It!</button>
+    </div>
+  </div>
+
+
+  <div class="advanced-section" fxLayout="column" fxLayoutAlign="space-between center">
+    <h2 class="advanced-section__title">Advanced Statistics</h2>
+    <p class="advanced-section__text">
+      Track how your links are performing across the web with our
+      advanced statistics dashboard.
     </p>
-    <button class="top-section__button rounded" fxFlexAlign.gt-md="start">Get Started</button>
+    <div class="advanced-section__cards-container" fxLayout="column" fxLayoutGap="90px">
+      <app-card cardTitle="Brand Recognition" icon="icon-brand-recognition">
+        Boost your brand recognition with each click. Generic links don’t
+        mean a thing. Branded links help instil confidence in your content.
+      </app-card>
+      <app-card cardTitle="Detailed Records" icon="icon-detailed-records" [showConnectors]='true'>
+        Gain insights into who is clicking your links. Knowing when and where
+        people engage with your content helps inform better decisions.
+      </app-card>
+      <app-card cardTitle="Fully Customizable" icon="icon-fully-customizable">
+        Improve brand awareness and content discoverability through customizable
+        links, supercharging audience engagement.
+      </app-card>
+    </div>
   </div>
-</div>
 
-<div class="search-bar" fxLayout="column">
-  <input class="search-bar__input" type="text" placeholder="Shorten a link here...">
-  <button class="search-bar__button">Shorten It!</button>
-</div>
-
-<div class="advanced-section" fxLayout="column" fxLayoutAlign="space-between center">
-  <h2 class="advanced-section__title">Advanced Statistics</h2>
-  <p class="advanced-section__text">
-    Track how your links are performing across the web with our
-    advanced statistics dashboard.
-  </p>
-  <div class="advanced-section__cards-container" fxLayout="column" fxLayoutGap="90px">
-    <app-card cardTitle="Brand Recognition" icon="icon-brand-recognition">
-      Boost your brand recognition with each click. Generic links don’t
-      mean a thing. Branded links help instil confidence in your content.
-    </app-card>
-    <app-card cardTitle="Detailed Records" icon="icon-detailed-records" [showConnectors]='true'>
-      Gain insights into who is clicking your links. Knowing when and where
-      people engage with your content helps inform better decisions.
-    </app-card>
-    <app-card cardTitle="Fully Customizable" icon="icon-fully-customizable">
-      Improve brand awareness and content discoverability through customizable
-      links, supercharging audience engagement.
-    </app-card>
+  <div class="boost-section" fxLayout="column" fxLayoutAlign="center center">
+    <h2 class="boost-section__title">Boost your links today</h2>
+    <button class="boost-section__button rounded">Get Started</button>
   </div>
+
+
+  <footer fxLayout="column" fxLayout="column" fxLayoutAlign="center center">
+    <img class="footer__logo" src="../assets/images/logo-light.svg" alt="Shortly logo" />
+    <app-footer-item title="Features" [listItems]="['Link Shortening','Branded Links','Analytics']"></app-footer-item>
+    <app-footer-item title="Resources" [listItems]="['Blog','Developers','Support']"></app-footer-item>
+    <app-footer-item title="Company" [listItems]="['About','Our Team','Careers', 'Contact']"></app-footer-item>
+    <div class="footer__social-icons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap=24px>
+      <!-- remove class when unused -->
+      <img class="footer__social-icon" src="../assets/images/icon-facebook.svg"> <!-- remove class when unused -->
+      <img class="footer__social-icon" src="../assets/images/icon-twitter.svg">
+      <img class="footer__social-icon" src="../assets/images/icon-pinterest.svg">
+      <img class="footer__social-icon" src="../assets/images/icon-instagram.svg">
+    </div>
+  </footer>
 </div>
-
-<div class="boost-section" fxLayout="column" fxLayoutAlign="center center">
-  <h2 class="boost-section__title">Boost your links today</h2>
-  <button class="boost-section__button rounded">Get Started</button>
-</div>
-
-
-<footer fxLayout="column" fxLayout="column" fxLayoutAlign="center center">
-  <img class="footer__logo" src="../assets/images/logo-light.svg" alt="Shortly logo" />
-  <app-footer-item title="Features" [listItems]="['Link Shortening','Branded Links','Analytics']"></app-footer-item>
-  <app-footer-item title="Resources" [listItems]="['Blog','Developers','Support']"></app-footer-item>
-  <app-footer-item title="Company" [listItems]="['About','Our Team','Careers', 'Contact']"></app-footer-item>
-  <div class="footer__social-icons" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap=24px>
-    <!-- remove class when unused -->
-    <img class="footer__social-icon" src="../assets/images/icon-facebook.svg"> <!-- remove class when unused -->
-    <img class="footer__social-icon" src="../assets/images/icon-twitter.svg">
-    <img class="footer__social-icon" src="../assets/images/icon-pinterest.svg">
-    <img class="footer__social-icon" src="../assets/images/icon-instagram.svg">
-  </div>
-</footer>
