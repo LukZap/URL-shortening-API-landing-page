@@ -88,14 +88,18 @@
     </div>
   </div>
 
-  <div class="boost-section" fxLayout="column" fxLayoutAlign="center center">
-    <h2 class="boost-section__title">Boost your links today</h2>
-    <button class="boost-section__button rounded">Get Started</button>
+  <div class="boost-section" fxLayout="column" fxLayoutAlign="center center"
+    [ngStyle.gt-xs]="{'background-image': 'url(../assets/images/bg-boost-desktop.svg)', 'background-size':  'auto 100%', 'height': '260px'}">
+    <h2 class="boost-section__title" [ngStyle.gt-sm]="{'font-size': '2.25rem'}">Boost your links today</h2>
+    <button class="boost-section__button rounded" [ngStyle.gt-sm]="{'font-size': '1.1rem'}">Get Started</button>
   </div>
 
 
-  <footer fxLayout="column" fxLayout="column" fxLayoutAlign="center center">
-    <img class="footer__logo" src="../assets/images/logo-light.svg" alt="Shortly logo" />
+  <footer fxLayout="column" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center" fxLayoutAlign.gt-sm="space-between start"
+    [ngStyle.gt-sm]="{'text-align': 'left', 'padding-top': '68px'}" fxLayoutGap.lt-md="22px">
+    <div fxFlex.gt-sm="27%">
+      <img class="footer__logo"  src="../assets/images/logo-light.svg" alt="Shortly logo" />
+    </div>
     <app-footer-item title="Features" [listItems]="['Link Shortening','Branded Links','Analytics']"></app-footer-item>
     <app-footer-item title="Resources" [listItems]="['Blog','Developers','Support']"></app-footer-item>
     <app-footer-item title="Company" [listItems]="['About','Our Team','Careers', 'Contact']"></app-footer-item>

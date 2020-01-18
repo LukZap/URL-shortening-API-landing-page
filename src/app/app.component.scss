@@ -127,6 +127,8 @@ header {
 .boost-section {
   background-color: $primary-dark-violet;
   background-image: url(../assets/images/bg-boost-mobile.svg);
+  background-size: cover;
+  text-align: center;
   height: 300px;
 
   &__title {
@@ -142,14 +144,19 @@ header {
 footer {
   $self: '.footer';
   background-color: $very-dark-violet;
-  padding: 45px 0;
+  padding: 45px 40px;
   text-align: center;
 
   #{$self}__logo {
-    margin-bottom: 55px;
+    margin-bottom: 30px;
   }
-}
 
-app-footer-item {
-  margin-bottom: 35px;
+  #{$self}__social-icon {
+    cursor: pointer;
+    filter: invert(100%);
+
+    &:hover {
+      filter: invert(87%) sepia(76%) saturate(5854%) hue-rotate(127deg) brightness(85%) contrast(88%);
+    }
+  }
 }

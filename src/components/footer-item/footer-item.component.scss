@@ -1,6 +1,8 @@
 @import '../../styles/variables.scss';
 
 .footer-item {
+  padding-top: 10px;
+
   &__title {
     color: white;
     margin-bottom: 30px;
@@ -12,6 +14,11 @@
   }
 
   &__list-item {
+    cursor: pointer;
     margin-bottom: 20px;
+
+    &:hover {
+      color: $primary-cyan;
+    }
   }
 }
