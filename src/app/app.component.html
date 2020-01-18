@@ -1,15 +1,15 @@
-<header>
+<header [ngStyle.gt-xs]="{'margin-bottom': '45px'}">
   <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-md="start center">
     <img src="../assets/images/logo.svg" alt="Shortly logo">
     <div class="header__menu-container" fxLayout="row" fxLayoutAlign="space-between center" fxShow
       [fxHide.lt-md]="true">
       <div fxLayout="row" fxLayoutGap="30px">
-        <h5 class="header__menu-item">Features</h5>  <!-- change to buttons? -->
+        <h5 class="header__menu-item">Features</h5> <!-- change to buttons? -->
         <h5 class="header__menu-item">Pricing</h5>
         <h5 class="header__menu-item">Resources</h5>
       </div>
       <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px">
-        <h5 class="header__menu-item">Login</h5>  <!-- change to buttons? -->
+        <h5 class="header__menu-item">Login</h5> <!-- change to buttons? -->
         <button class="small rounded">Sign Up</button>
       </div>
     </div>
@@ -17,9 +17,9 @@
       <i class="fas fa-bars"></i>
     </button>
   </div>
-  <div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center" fxHide
-    [fxShow.lt-md]="true">
-    <h3 class="hamburger-menu__menu-item">Features</h3>  <!-- change to buttons? -->
+  <div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center"
+    fxHide [fxShow.lt-md]="true">
+    <h3 class="hamburger-menu__menu-item">Features</h3> <!-- change to buttons? -->
     <h3 class="hamburger-menu__menu-item">Pricing</h3>
     <h3 class="hamburger-menu__menu-item">Resources</h3>
     <div class="hamburger-menu__separator"></div>
@@ -28,18 +28,22 @@
   </div>
 </header>
 
-
-<div class="top-section" fxLayout="column" fxLayoutAlign="space-between center" fxLayout.gt-xs="row">
-  <img class="top-section__image" fxFlexAlign.xs="start" fxFlexOrder.gt-xs="1" [ngStyle.sm]="{width: '60%'}"
-    src="../assets/images/illustration-working.svg" alt="Man sitting at the desk" />
-  <div [ngStyle.gt-xs]="{'min-width': '55%', 'margin-right': '30px'}" fxLayout="column"
+<!-- add margin to body -->
+<!-- not too much styles on that template? -->
+<div class="top-section" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between center">
+  <img class="top-section__image" fxFlexAlign.xs="start" fxFlexOrder.gt-xs="1" [ngStyle.xs]="{'max-width': '705px'}"
+    [ngStyle.sm]="{width: '60%'}" [ngStyle.gt-sm]="{width: '50%'}" src="../assets/images/illustration-working.svg"
+    alt="Man sitting at the desk" />
+  <div [ngStyle.gt-xs]="{'min-width': '55%', 'margin-right': '30px'}"
+    [ngStyle.gt-md]="{ 'text-align': 'left', 'min-width': '60%', 'margin-right': '40px'}" fxLayout="column"
     fxLayoutAlign="space-between center">
-    <h1 class="top-section__title">More than just shorter links</h1>
-    <p class="top-section__text">
+    <h1 class="top-section__title" [ngStyle.md]="{'font-size': '3rem'}" [ngStyle.gt-md]="{'font-size': '4.2rem'}">
+      More than just shorter links</h1>
+    <p class="top-section__text" [ngStyle.gt-sm]="{'font-size': '1.13rem'}" [ngStyle.gt-md]="{'font-size': '1.25rem'}">
       Build your brand’s recognition and get detailed insights
       on how your links are performing.
     </p>
-    <button class="top-section__button rounded">Get Started</button>
+    <button class="top-section__button rounded" fxFlexAlign.gt-md="start">Get Started</button>
   </div>
 </div>
 

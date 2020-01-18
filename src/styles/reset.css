@@ -232,10 +232,10 @@ button {
     -moz-appearance: none;
 }
 
-button:hover,
+/* button:hover,
 button:focus {
-    /* background: #0053ba; */
-}
+    background: #0053ba;
+} */
 
 button:focus {
     outline: 1px solid #fff;
