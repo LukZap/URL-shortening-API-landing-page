@@ -106,13 +106,16 @@ header {
     background-color: $light-gray;
     padding: 175px 25px 75px;
 
+    &__title-container {
+      text-align: center;
+    }
+
     &__title {
         margin-bottom: 20px;
     }
 
     &__text {
         font-size: 0.85rem;
-        text-align: center;
         letter-spacing: 0.017rem;
     }
 

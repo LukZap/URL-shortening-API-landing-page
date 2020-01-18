@@ -61,15 +61,18 @@
     </div>
   </div>
 
-
   <div class="advanced-section" fxLayout="column" fxLayoutAlign="space-between center">
-    <h2 class="advanced-section__title">Advanced Statistics</h2>
-    <p class="advanced-section__text">
-      Track how your links are performing across the web with our
-      advanced statistics dashboard.
-    </p>
-    <div class="advanced-section__cards-container" fxLayout="column" fxLayoutGap="90px">
-      <app-card cardTitle="Brand Recognition" icon="icon-brand-recognition">
+    <div class="advanced-section__title-container" [ngStyle.gt-xs]="{'margin': '0 27% 45px'}">
+      <h2 class="advanced-section__title" [ngStyle.gt-sm]="{'font-size': '2.2rem'}">Advanced Statistics</h2>
+      <p class="advanced-section__text" [ngStyle.gt-sm]="{'font-size': '1rem'}">
+        Track how your links are performing across the web with our
+        advanced statistics dashboard.
+      </p>
+    </div>
+    <div class="advanced-section__cards-container" fxLayout="column" fxLayoutGap="90px" fxLayoutGap.gt-sm="34px"
+      fxLayout.gt-sm="row" [ngStyle.gt-sm]="{'padding-bottom': '75px'}">
+      <app-card cardTitle="Brand Recognition" icon="icon-brand-recognition"
+        [ngStyle.gt-sm]="{'position': 'relative', 'top': '-50px'}">
         Boost your brand recognition with each click. Generic links don’t
         mean a thing. Branded links help instil confidence in your content.
       </app-card>
@@ -77,7 +80,8 @@
         Gain insights into who is clicking your links. Knowing when and where
         people engage with your content helps inform better decisions.
       </app-card>
-      <app-card cardTitle="Fully Customizable" icon="icon-fully-customizable">
+      <app-card cardTitle="Fully Customizable" icon="icon-fully-customizable" fxFlexAlign.gt-xs="end"
+        [ngStyle.gt-sm]="{'position': 'relative', 'top': '50px'}">
         Improve brand awareness and content discoverability through customizable
         links, supercharging audience engagement.
       </app-card>

@@ -1,6 +1,7 @@
 @import '../../styles/variables.scss';
 
 .card {
+    $self: &;
     background-color: white;
     padding: 10px;
     text-align: center;
@@ -8,6 +9,7 @@
     padding: 75px 30px 40px;
     position: relative;
     z-index: 20;
+    max-width: 460px;
 
     &__icon-container {
       position: absolute;
@@ -17,8 +19,8 @@
       display: flex;
       background-color: $primary-dark-violet;
       border-radius: 50%;
-      width: 85px;
-      height: 85px;
+      width: 87px;
+      height: 87px;
       align-items: center;
       justify-content: center;
       margin-bottom: 30px;
@@ -30,7 +32,6 @@
 
     &__text {
         font-size: 0.83rem;
-        text-align: center;
         letter-spacing: 0.01rem;
     }
 
@@ -57,6 +58,30 @@
       &::after {
         content: '';
         bottom: -100px;
+      }
+
+      // take common part with above
+      &#{$self}--horizontal-connectors{
+        &::before, &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 40%;
+          transform: translateY(-50%) translateZ(-10px);  /* for displaying below parent -  This is important */
+          height: 8px;
+          width: 150px;
+          background-color: $primary-cyan;
+        }
+
+        &::before {
+          content: '';
+          left: -100px;
+        }
+
+        &::after {
+          content: '';
+          left: calc(100% - 50px);
+        }
       }
     }
 }

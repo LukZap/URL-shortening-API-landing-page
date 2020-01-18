@@ -1,9 +1,11 @@
-<div class="card" [ngClass]="{'card--connectors': showConnectors}">
-  <span class="card__icon-container">
+<div class="card" [ngClass]="{'card--connectors': showConnectors}"
+  [ngClass.gt-sm]="{'card--connectors': showConnectors, 'card--horizontal-connectors' : true }"
+  [ngStyle.gt-sm]="{'text-align': 'left'}">
+  <span class="card__icon-container" [ngStyle.gt-sm]="{'left': '30px', 'transform': 'translate(0,-50%)'}">
     <img class="card__icon-image" [src]="iconPath">
   </span>
-    <h3 class="card__title">{{cardTitle}}</h3>
-    <p class="card__text">
-      <ng-content></ng-content>
-    </p>
+  <h3 class="card__title" [ngStyle.gt-sm]="{'font-size': '1,25rem'}">{{cardTitle}}</h3>
+  <p class="card__text" [ngStyle.gt-sm]="{'font-size': '0.88rem'}">
+    <ng-content></ng-content>
+  </p>
 </div>
