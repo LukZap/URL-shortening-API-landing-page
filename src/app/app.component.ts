@@ -1,5 +1,7 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
+import { ShortenedLink } from 'src/models/shortened-link';
+import { LinkService } from 'src/services/link-service.service';
 
 @Component({
   selector: 'app-root',
@@ -23,4 +25,19 @@ import { trigger, transition, style, animate } from '@angular/animations';
 export class AppComponent {
   showMenu = false;
   title = 'shortly';
+  linkToShorten = '';
+  shortenedLinks: ShortenedLink[] = [];
+
+  constructor(private linkService: LinkService ) {
+  }
+
+  getShortenedLink() {
+    this.linkService
+      .getShortenedUrl(this.linkToShorten)
+      .subscribe(link => {
+        console.log(link);
+        this.shortenedLinks.push(link);
+      });
+  }
+
 }
