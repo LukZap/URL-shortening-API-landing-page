@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://rel.ink/api/links/'
+  apiUrl: 'https://rel.ink/api/links/',
+  linkBase: 'https://rel.ink/'
 };
 
 /*

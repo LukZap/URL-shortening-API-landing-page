@@ -1,5 +1,9 @@
-<div class="shortened-link" fxLayout="column">
-  <div class="shortened-link__original">{{original}}</div>
-  <div class="shortened-link__new">{{new}}</div>
-  <button class="shortened-link__button small">Copy</button>
+<div class="shortened-link" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-between center"
+  [ngStyle.gt-sm]="{'padding': '10px 20px 10px 0'}">
+  <div class="shortened-link__original" [ngStyle.gt-sm]="{'border': 'none', 'font-size' : '1rem'}">{{original}}</div>
+  <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign.gt-sm="space-between center">
+    <div class="shortened-link__new" [ngStyle.gt-sm]="{'font-size' : '1rem'}">{{new}}</div>
+    <button class="shortened-link__button small" [ngStyle.gt-sm]="{'margin': '0'}" ngxClipboard [cbContent]="new"
+      [ngClass]="{'shortened-link__button--copied': copied}">{{ copied ? 'Copied!' : 'Copy' }}</button>
+  </div>
 </div>

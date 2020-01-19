@@ -12,6 +12,8 @@ import { FooterItemComponent } from 'src/components/footer-item/footer-item.comp
 import { ShortenedLinkComponent } from 'src/components/shortened-link/shortened-link.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LinkService } from 'src/services/link-service.service';
+import { ClipboardModule } from 'ngx-clipboard';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { LinkService } from 'src/services/link-service.service';
     AppRoutingModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    ClipboardModule
   ],
   providers: [LinkService],
   bootstrap: [AppComponent]

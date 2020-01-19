@@ -35,9 +35,9 @@ export class AppComponent {
     this.linkService
       .getShortenedUrl(this.linkToShorten)
       .subscribe(link => {
-        console.log(link);
-        this.shortenedLinks.push(link);
+        if (!this.shortenedLinks.find(x => x.new === link.new)) {
+           this.shortenedLinks.push(link); // maybe show toaster to indicate duplicate value?
+        }
       });
   }
-
 }

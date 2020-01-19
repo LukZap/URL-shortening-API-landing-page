@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ClipboardService, IClipboardResponse } from 'ngx-clipboard';
 
 @Component({
   selector: 'app-shortened-link',
@@ -11,7 +12,13 @@ export class ShortenedLinkComponent implements OnInit {
   @Input() new: string;
   @Input() copied: boolean;
 
-  constructor() { }
+  constructor(private clipboardService: ClipboardService) {
+    this.clipboardService.copyResponse$.subscribe((res: IClipboardResponse) => {
+      if (res.isSuccess) {
+        this.copied = res.content === this.new;
+      }
+    });
+  }
 
   ngOnInit() {
   }

@@ -11,9 +11,11 @@ import { ShortenedLink } from 'src/models/shortened-link';
 export class LinkService {
 
   private apiUrl: string;
+  private linkBase: string;
 
   constructor(private http: HttpClient) {
     this.apiUrl = environment.apiUrl;
+    this.linkBase = environment.apiUrl;
   }
 
   // catch errs
@@ -22,7 +24,7 @@ export class LinkService {
       .post<any>(this.apiUrl, { url: originalUrl })
       .pipe(map(res => {
         const link = new ShortenedLink();
-        link.new = `https://rel.ink/${res.hashid}`; // to env
+        link.new = `${this.linkBase}${res.hashid}`;
         link.original = res.url;
         return link;
       }));
