@@ -73,9 +73,25 @@ input {
     padding: 12px;
     padding-bottom: 10px;
     color: $grayish-violet;
+    border-width: 3px;
+    border-color: rgba(0,0,0,0); // transparent
 
     &::placeholder {
         color: $grayish-violet;
         opacity: 1; /* Firefox */
       }
+
+    &.ng-invalid:not(.ng-pristine) //check PRISITNE
+    {
+      border-color: $secondary-red;
+      border-width: 3px;
+      border-style: solid;
+
+      &::placeholder {
+        color: $secondary-red;
+        opacity: .5;
+      }
+    }
 }
+
+

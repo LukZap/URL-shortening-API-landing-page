@@ -53,14 +53,21 @@
   <div class="search-container" [ngStyle.lt-lg]="{'padding': '0 25px'}">
     <div class="search-bar" fxLayout="column" fxLayoutGap="17px" fxLayoutGap.gt-sm="22px" fxLayout.gt-sm="row"
       fxLayoutAlign.gt-sm="space-between stretch" [ngStyle.sm]="{'padding':'30px 30px'}"
-      [ngStyle.gt-sm]="{'padding':'50px 60px', 'background-image': 'url(../assets/images/bg-shorten-desktop.svg)', 'background-size': cover}">
-      <input class="search-bar__input" [ngStyle.gt-sm]="{'padding': '0.7em 1.5em', 'font-size': '1rem'}"
-        [ngStyle.gt-md]="{'font-size': '1.1rem'}" fxFlex.gt-sm="auto" type="text" placeholder="Shorten a link here..."
-        [(ngModel)]="linkToShorten" #ctrl="ngModel" type="url" required>
+      [ngStyle.gt-sm]="{'padding':'50px 60px', 'background-image': 'url(../assets/images/bg-shorten-desktop.svg)', 'background-size': '100% 100%'}">
+      <div class="search-bar__input-container">
+        <!-- can be a custom control?-->
+        <input class="search-bar__input" [ngStyle.gt-sm]="{'padding': '0.7em 1.5em', 'font-size': '1rem'}"
+          [ngStyle.gt-md]="{'font-size': '1.1rem'}" type="text" placeholder="Shorten a link here..."
+          [(ngModel)]="linkToShorten" #ctrl="ngModel" pattern="https?://.+" type="url" required>
+        <div class="search-bar__validation-message" ngClass.lt-md="search-bar__validation-message--small"
+          *ngIf="ctrl.invalid && !ctrl.pristine && ctrl.errors.required">Please add link</div>
+        <div class="search-bar__validation-message" ngClass.lt-md="search-bar__validation-message--small"
+          *ngIf="ctrl.invalid && !ctrl.pristine && ctrl.errors.pattern && !ctrl.errors.required">Please enter a valid
+          URL</div>
+      </div>
       <button class="search-bar__button" [ngStyle.gt-sm]="{'font-size': '0.9rem'}"
-        [ngStyle.gt-md]="{'font-size': '1.1rem'}" fxFlex.gt-sm="10em" (click)="getShortenedLink()">Shorten
+        [ngStyle.gt-md]="{'font-size': '1.1rem'}" fxFlex.gt-sm="10em" (click)="getShortenedLink()" [disabled]="ctrl.invalid">Shorten
         It!</button>
-      <div *ngIf="!ctrl.valid" style="width: 100px; height: 100px; background-color: red;"></div>  <!-- delete that later -->
     </div>
   </div>
 

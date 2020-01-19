@@ -118,6 +118,30 @@ header {
         border-radius: 6px;
         padding: 10px;
     }
+
+    &__validation-message {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: 0;
+      font-style: italic;
+      color: $secondary-red;
+      font-size: 0.85rem;
+
+      &--small {
+        position: initial;
+        margin-top: 8px;
+        font-size: 0.7rem;
+      }
+    }
+
+    &__input-container {
+      position: relative;
+      width: 100%;
+    }
+
+    &__input {
+      width: 100%;
+    }
 }
 
 .links-section {
