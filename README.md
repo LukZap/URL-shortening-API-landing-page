@@ -2,6 +2,9 @@
 
 ![Design preview for the Shortly URL shortening API coding challenge](./design/desktop-preview.jpg)
 
+## TODO
+- split app.component into smaller components
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
