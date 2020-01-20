@@ -93,7 +93,7 @@ header {
   position: relative;
   z-index: 20;
 
-  ::before {
+  &::before {
     content: '';
     display: block;
     position: absolute;
