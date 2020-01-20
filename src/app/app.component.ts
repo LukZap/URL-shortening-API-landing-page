@@ -26,9 +26,11 @@ export class AppComponent {
   showMenu = false;
   title = 'shortly';
   linkToShorten = '';
-  shortenedLinks: ShortenedLink[] = [];
+  shortenedLinks: ShortenedLink[];
 
   constructor(private linkService: LinkService ) {
+    const links =  JSON.parse(localStorage.getItem('links'));
+    this.shortenedLinks = links || [];
   }
 
   getShortenedLink() {
@@ -37,6 +39,7 @@ export class AppComponent {
       .subscribe(link => {
         if (!this.shortenedLinks.find(x => x.new === link.new)) {
            this.shortenedLinks.push(link); // maybe show toaster to indicate duplicate value?
+           localStorage.setItem('links', JSON.stringify(this.shortenedLinks));
         }
       });
   }

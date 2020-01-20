@@ -12,6 +12,7 @@ export class ShortenedLinkComponent implements OnInit {
   @Input() new: string;
   @Input() copied: boolean;
 
+  // unsubscribe ?
   constructor(private clipboardService: ClipboardService) {
     this.clipboardService.copyResponse$.subscribe((res: IClipboardResponse) => {
       if (res.isSuccess) {
