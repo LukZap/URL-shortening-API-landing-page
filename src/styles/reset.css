@@ -226,8 +226,9 @@ button {
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
-    transition: background 250ms ease-in-out,
-                transform 150ms ease;
+    transition:
+      background 250ms ease-in-out,
+      transform 150ms ease;
     -webkit-appearance: none;
     -moz-appearance: none;
 }
@@ -238,8 +239,7 @@ button:focus {
 } */
 
 button:focus {
-    outline: 1px solid #fff;
-    outline-offset: -4px;
+    box-shadow: 0 0 0 1pt #AAA;
 }
 
 button:active {
