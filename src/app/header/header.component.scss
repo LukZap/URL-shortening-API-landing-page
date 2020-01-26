@@ -1,0 +1,57 @@
+@import '../../styles/variables.scss';
+
+.header {
+  position: relative;
+  padding: 35px 0 15px;
+
+  &__menu-container {
+    width: 100%;
+    margin-left: 40px;
+  }
+
+  &__menu-item {
+    cursor: pointer;
+    color: $grayish-violet;
+
+    &:hover {
+      color: $very-dark-blue;
+    }
+  }
+
+  &__hamburger-button {
+    color: $grayish-violet;
+    font-size: 1.6rem;
+    padding: 0;
+    background-color: white;
+  }
+}
+
+.hamburger-menu {
+  position: absolute;
+  height: 370px;
+  width: calc(100% - 2 * 25px);
+  padding: 0 25px;
+  left: 25px;
+  background-color: $primary-dark-violet;
+  border-radius: 10px;
+
+  &--closed {
+    display: none !important;
+  }
+
+  &__menu-item {
+    color: white;
+    font-size: 1em;
+  }
+
+  &__separator {
+    height: 1px;
+    width: 100%;
+    background-color: $gray;
+    opacity: .2;
+  }
+
+  &__menu-button {
+    width: 100%;
+  }
+}

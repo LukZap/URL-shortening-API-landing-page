@@ -13,6 +13,11 @@ import { ShortenedLinkComponent } from 'src/components/shortened-link/shortened-
 import { HttpClientModule } from '@angular/common/http';
 import { LinkService } from 'src/services/link-service.service';
 import { ClipboardModule } from 'ngx-clipboard';
+import { HeaderComponent } from './header/header.component';
+import { TopSectionComponent } from './top-section/top-section.component';
+import { SearchComponent } from './search/search.component';
+import { AdvancedComponent } from './advanced/advanced.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -20,7 +25,12 @@ import { ClipboardModule } from 'ngx-clipboard';
     AppComponent,
     CardComponent,
     FooterItemComponent,
-    ShortenedLinkComponent
+    ShortenedLinkComponent,
+    HeaderComponent,
+    TopSectionComponent,
+    SearchComponent,
+    AdvancedComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,

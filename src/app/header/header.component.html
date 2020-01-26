@@ -1,0 +1,27 @@
+<div class="header" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-md="start center"
+  [ngStyle.lt-lg]="{'padding-left': '25px', 'padding-right': '25px'}">
+  <img src="../assets/images/logo.svg" alt="Shortly logo">
+  <div class="header__menu-container" fxLayout="row" fxLayoutAlign="space-between center" fxShow [fxHide.lt-md]="true">
+    <div fxLayout="row" fxLayoutGap="30px">
+      <h5 class="header__menu-item">Features</h5> <!-- change to buttons? -->
+      <h5 class="header__menu-item">Pricing</h5>
+      <h5 class="header__menu-item">Resources</h5>
+    </div>
+    <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px">
+      <h5 class="header__menu-item">Login</h5> <!-- change to buttons? -->
+      <button class="small rounded">Sign Up</button>
+    </div>
+  </div>
+  <button class="header__hamburger-button" fxHide [fxShow.lt-md]="true" (click)="showMenu = !showMenu">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+<div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center"
+  fxHide [fxShow.lt-md]="true">
+  <h3 class="hamburger-menu__menu-item">Features</h3> <!-- change to buttons? -->
+  <h3 class="hamburger-menu__menu-item">Pricing</h3>
+  <h3 class="hamburger-menu__menu-item">Resources</h3>
+  <div class="hamburger-menu__separator"></div>
+  <h3 class="hamburger-menu__menu-item">Login</h3>
+  <button class="hamburger-menu__menu-button rounded">Sign Up</button>
+</div>

@@ -5,65 +5,6 @@
   padding-right: calc((100% - 1200px)/2);
 }
 
-header {
-  position: relative;
-  $self: '.header';
-  padding: 35px 25px 15px;
-
-  #{$self}__menu-container {
-    width: 100%;
-    margin-left: 40px;
-  }
-
-  #{$self}__menu-item {
-    cursor: pointer;
-    color: $grayish-violet;
-
-    &:hover {
-      color: $very-dark-blue;
-    }
-  }
-
-  #{$self}__hamburger-button {
-    color: $grayish-violet;
-    font-size: 1.6rem;
-    padding: 0;
-    background-color: white;
-  }
-}
-
-.hamburger-menu {
-  position: absolute;
-  height: 370px;
-  width: calc(100% - 2 * 25px);
-  padding: 0 25px;
-  bottom: 0;
-  left: 25px;
-  transform: translateY(100%);
-  background-color: $primary-dark-violet;
-  border-radius: 10px;
-
-  &--closed {
-    display: none !important;
-  }
-
-  &__menu-item {
-    color: white;
-    font-size: 1em;
-  }
-
-  &__separator {
-    height: 1px;
-    width: 100%;
-    background-color: $gray;
-    opacity: .2;
-  }
-
-  &__menu-button {
-    width: 100%;
-  }
-}
-
 .top-section {
     padding: 0 25px;
     text-align: center;
@@ -190,23 +131,8 @@ header {
   }
 }
 
-footer {
-  $self: '.footer';
+[app-footer] {
   background-color: $very-dark-violet;
   padding: 45px 40px;
   text-align: center;
-
-  #{$self}__logo {
-    margin-bottom: 30px;
-    filter: invert(97%) sepia(100%) saturate(1%) hue-rotate(357deg) brightness(108%) contrast(101%);
-  }
-
-  #{$self}__social-icon {
-    cursor: pointer;
-    filter: invert(100%);
-
-    &:hover {
-      filter: invert(87%) sepia(76%) saturate(5854%) hue-rotate(127deg) brightness(85%) contrast(88%);
-    }
-  }
 }

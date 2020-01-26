@@ -1,33 +1,7 @@
 <div ngClass.gt-md="wrapper">
-  <header [ngStyle.gt-xs]="{'margin-bottom': '45px'}">
-    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutAlign.gt-md="start center">
-      <img src="../assets/images/logo.svg" alt="Shortly logo">
-      <div class="header__menu-container" fxLayout="row" fxLayoutAlign="space-between center" fxShow
-        [fxHide.lt-md]="true">
-        <div fxLayout="row" fxLayoutGap="30px">
-          <h5 class="header__menu-item">Features</h5> <!-- change to buttons? -->
-          <h5 class="header__menu-item">Pricing</h5>
-          <h5 class="header__menu-item">Resources</h5>
-        </div>
-        <div fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="40px">
-          <h5 class="header__menu-item">Login</h5> <!-- change to buttons? -->
-          <button class="small rounded">Sign Up</button>
-        </div>
-      </div>
-      <button class="header__hamburger-button" fxHide [fxShow.lt-md]="true" (click)="showMenu = !showMenu">
-        <i class="fas fa-bars"></i>
-      </button>
-    </div>
-    <div class="hamburger-menu" *ngIf="showMenu" [@enterAnimation] fxLayout="column" fxLayoutAlign="space-evenly center"
-      fxHide [fxShow.lt-md]="true">
-      <h3 class="hamburger-menu__menu-item">Features</h3> <!-- change to buttons? -->
-      <h3 class="hamburger-menu__menu-item">Pricing</h3>
-      <h3 class="hamburger-menu__menu-item">Resources</h3>
-      <div class="hamburger-menu__separator"></div>
-      <h3 class="hamburger-menu__menu-item">Login</h3>
-      <button class="hamburger-menu__menu-button rounded">Sign Up</button>
-    </div>
-  </header>
+
+  <div app-header [ngStyle.gt-xs]="{'margin-bottom': '45px'}"></div>
+
 
   <!-- not too much styles on that template? -->
   <div class="top-section" fxLayout="column" fxLayout.gt-xs="row" fxLayoutAlign="space-between center">
@@ -112,21 +86,7 @@
     <button class="boost-section__button rounded" [ngStyle.gt-sm]="{'font-size': '1.1rem'}">Get Started</button>
   </div>
 
-
-  <footer fxLayout="column" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center"
-    fxLayoutAlign.gt-sm="space-between start" [ngStyle.gt-sm]="{'text-align': 'left', 'padding-top': '68px'}"
-    fxLayoutGap.lt-md="22px">
-    <div fxFlex.gt-sm="27%">
-      <img class="footer__logo" src="../assets/images/logo.svg" alt="Shortly logo" />
-    </div>
-    <app-footer-item title="Features" [listItems]="['Link Shortening','Branded Links','Analytics']"></app-footer-item>
-    <app-footer-item title="Resources" [listItems]="['Blog','Developers','Support']"></app-footer-item>
-    <app-footer-item title="Company" [listItems]="['About','Our Team','Careers', 'Contact']"></app-footer-item>
-    <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap=24px>
-      <img class="footer__social-icon" src="../assets/images/icon-facebook.svg">
-      <img class="footer__social-icon" src="../assets/images/icon-twitter.svg">
-      <img class="footer__social-icon" src="../assets/images/icon-pinterest.svg">
-      <img class="footer__social-icon" src="../assets/images/icon-instagram.svg">
-    </div>
-  </footer>
+  <div app-footer fxLayout="column" fxLayout="column" fxLayout.gt-sm="row" fxLayoutAlign="center center"
+  fxLayoutAlign.gt-sm="space-between start" [ngStyle.gt-sm]="{'text-align': 'left', 'padding-top': '68px'}"
+  fxLayoutGap.lt-md="22px"></div>
 </div>
