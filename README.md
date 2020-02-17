@@ -1,6 +1,6 @@
 # Frontend Mentor - Shortly URL shortening API Challenge
 
-![Design preview for the Shortly URL shortening API coding challenge](./starter files/design/desktop-preview.jpg)
+![Design preview for the Shortly URL shortening API coding challenge](./starter%20files/design/desktop-preview.jpg)
 
 ## TODO
 - split app.component into smaller components
